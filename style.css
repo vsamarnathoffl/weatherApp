@@ -64,20 +64,16 @@
         }       
         #weather-Data,#error-Message{
             margin-top: 10px;
+            text-align: center;
         }
-        #weather-Data > *{
+        #weather-Data > p{
             margin-top:5px;
         }
         .hidden{
-            display:none !important;
-        }
-        #weather-Data{
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
+            display:none;
         }
         #error-Message{
+
             color:red;
             font-size: 14px;   
         }
