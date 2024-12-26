@@ -38,16 +38,18 @@ document.addEventListener('DOMContentLoaded',()=>{
         city.textContent = name;
         temp.textContent = `Temperature: ${main.temp}`;
         weatherData.textContent = `Weather: ${weather[0].main}`;
-        if(weatherDisplay.contains('hidden'))weatherDisplay.classList.remove('hidden');
-        if(!errorMessageDisplay.contains('hidden'))errorMessageDisplay.classList.add('hidden');
+        if(weatherDisplay.classList.contains('hidden')===true)
+            weatherDisplay.classList.remove('hidden');
+        if(errorMessageDisplay.classList.contains('hidden')===false)
+            errorMessageDisplay.classList.add('hidden');
     }
 
     function displayErrorMessage(error){
         console.log(error);
-        if (weatherDisplay.classList.contains('hidden'))
-          weatherDisplay.classList.remove('hidden');
-        if (!errorMessageDisplay.classList.contains('hidden'))
-          errorMessageDisplay.classList.add('hidden');
+        if (weatherDisplay.classList.contains('hidden')===false)
+          weatherDisplay.classList.add('hidden');
+        if (errorMessageDisplay.classList.contains('hidden')===true)
+          errorMessageDisplay.classList.remove('hidden');
         errorMessageDisplay.textContent=error;
     }
 
