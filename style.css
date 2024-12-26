@@ -1,4 +1,4 @@
- *{
+        *{
             margin:0;
             padding:0;
             box-sizing: border-box;
@@ -61,14 +61,7 @@
         }
         button:active{
             transform: scale(0.95);
-        }
-
-        #weather-Data{
-            display:flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-        }
+        }       
         #weather-Data,#error-Message{
             margin-top: 10px;
         }
@@ -76,7 +69,13 @@
             margin-top:5px;
         }
         .hidden{
-            display:none;
+            display:none !important;
+        }
+        #weather-Data{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
         }
         #error-Message{
             color:red;
